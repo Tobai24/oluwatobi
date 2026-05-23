@@ -220,3 +220,31 @@
   margin-right: 0.3rem;
   margin-top: 0.3rem;
 }
+
+.publication-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.publication-year-col {
+  min-width: 20px;
+  max-width: 20px;
+  flex-shrink: 0;
+  padding: 0 !important;
+  text-align: left !important;
+  margin-left: -130px;
+}
+
+.publication-year {
+  font-weight: bold;
+  color: var(--global-theme-color);
+}
+
+
+.publication-content {
+  flex: 1;
+  padding: 0 !important;
+  margin-left: 135px; 
+}

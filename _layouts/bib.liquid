@@ -1,5 +1,10 @@
 ---
 ---
+{% assign publication_content_col_class = "col-12" %}
+{% if site.enable_publication_thumbnails %}
+  {% assign publication_content_col_class = publication_content_col_class | append: " col-sm-10" %}
+{% endif %}
+
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col-12 col-sm-2 abbr">
@@ -45,15 +50,16 @@
     </div>
   {% endif %}
 
-  <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="row publication-row">
-    <div class="col-12 col-sm-2 text-sm-right publication-year-col">
-      {% if entry.year %}
-        <div class="publication-year">{{ entry.year }}</div>
-      {% endif %}
-    </div>
-    <div class="col-12 col-sm-10 publication-content">
-      <div class="title">{{ entry.title }}</div>
+  <div class="{{ publication_content_col_class }}">
+    <!-- Entry bib key -->
+    <div id="{{ entry.key }}" class="row publication-row">
+      <div class="col-12 col-sm-2 text-sm-right publication-year-col">
+        {% if entry.year %}
+          <div class="publication-year">{{ entry.year }}</div>
+        {% endif %}
+      </div>
+      <div class="col-12 col-sm-10 publication-content">
+        <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -396,6 +402,7 @@
         <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
       </div>
     {% endif %}
+      </div>
     </div>
   </div>
 </div>
