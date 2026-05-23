@@ -215,6 +215,23 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.post-header .social-text {
+  margin-top: 0.25rem;
+  text-align: left;
+
+  a {
+    color: var(--global-theme-color);
+    font-size: 0.95rem;
+    margin-right: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+  }
+}
+
 .wechat-modal {
   display: none;
   position: fixed;

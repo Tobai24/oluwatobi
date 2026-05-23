@@ -8,13 +8,13 @@
   color-scheme: light;
   --global-bg-color: #{v.$white-color};
   --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$black-color};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #0f766e;
-  --global-hover-color: #0f766e;
+  --global-text-color: #20201d;
+  --global-text-color-light: #6f6d66;
+  --global-theme-color: #5f6258;
+  --global-hover-color: #3f443a;
   --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-dark};
-  --global-footer-text-color: #{v.$grey-color-light};
+  --global-footer-bg-color: var(--global-theme-color);
+  --global-footer-text-color: #{v.$white-color};
   --global-footer-link-color: #{v.$white-color};
   --global-distill-app-color: #{v.$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
@@ -76,16 +76,16 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{v.$grey-color-dark};
+  --global-bg-color: #20201d;
   --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #67e8f9;
-  --global-hover-color: #67e8f9;
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
+  --global-text-color: #e8e4da;
+  --global-text-color-light: #aaa398;
+  --global-theme-color: #b8b3a6;
+  --global-hover-color: #d2cbbb;
+  --global-hover-text-color: #20201d;
+  --global-footer-bg-color: var(--global-theme-color);
+  --global-footer-text-color: #20201d;
+  --global-footer-link-color: #20201d;
   --global-distill-app-color: #{v.$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{v.$grey-900};
