@@ -1,12 +1,12 @@
 ---
 layout: about
-title: home
+title: Home
 permalink: /
-subtitle: Personal website for publications, news, and writing.
+subtitle:
 
 profile:
-  align: right
-  image:
+  align: left
+  image: blog_image.jpeg
   image_circular: false # crops the image to make it circular
   more_info:
 
@@ -24,6 +24,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am **Oluwatobi Iyanuoluwa Akinmuleya**. This website brings my publications, updates, and writing into one simple place.
+I am a medical doctor passionate about advancing data-efficient artificial intelligence for medical imaging, particularly in resource-constrained environments. My work focuses on developing robust learning frameworks that can effectively leverage limited labeled data while improving imaging accessibility and quality across diverse clinical applications, including pediatric imaging.
 
-I am interested in data science, machine learning, and applied AI. I use this space to collect research work, project notes, and occasional blog posts as the portfolio grows.
+My research interests include self-supervised learning, multimodal representation learning and nuclear medicine imaging. In the long term, I aim to develop accessible and reliable AI-driven imaging solutions that enhance healthcare delivery and improve patient outcomes globally.

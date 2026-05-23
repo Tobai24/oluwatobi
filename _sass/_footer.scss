@@ -2,34 +2,30 @@
  * Footer styles
  ******************************************************************************/
 
-footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
-
-  .container {
-    color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
-    text-align: center;
-  }
-
-  a {
-    color: var(--global-footer-link-color);
-
-    &:hover {
-      color: var(--global-theme-color);
-      text-decoration: none;
-    }
-  }
-}
-
-footer.sticky-bottom {
+footer.site-footer {
+  background-color: var(--global-bg-color);
   border-top: 1px solid var(--global-divider-color);
+  bottom: auto !important;
+  position: static !important;
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
 
   .container {
     text-align: center;
+  }
+
+  .container,
+  .container * {
+    color: var(--global-text-color) !important;
+  }
+
+  a {
+    color: var(--global-text-color) !important;
+
+    &:hover {
+      color: var(--global-hover-color) !important;
+      text-decoration: none;
+    }
   }
 }

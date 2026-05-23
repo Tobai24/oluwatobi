@@ -2,13 +2,15 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
+      {% assign show_brand = true %}
+      {% if page.permalink == '/' or page.url contains '/blog/' %}
+        {% assign show_brand = false %}
+      {% endif %}
+      {% if show_brand %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
+              {{- site.first_name -}}
             {% endif %}
             {% if site.middle_name %}
               {{- site.middle_name -}}
@@ -47,8 +49,8 @@
           {% endfor %}
 
           <!-- Home -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}" data-section-nav="home">
+            <a class="nav-link" href="{{ '/' | relative_url }}" data-section-link="home">
               {{- about_title }}
               {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
@@ -56,15 +58,15 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/#publications' | relative_url }}">publications</a>
+          <li class="nav-item" data-section-nav="publications">
+            <a class="nav-link" href="{{ '/#publications' | relative_url }}" data-section-link="publications">Publications</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/#news' | relative_url }}">news</a>
+          <li class="nav-item" data-section-nav="news">
+            <a class="nav-link" href="{{ '/#news' | relative_url }}" data-section-link="news">News</a>
           </li>
           <li class="nav-item {% if page.url contains '/blog/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/blog/' | relative_url }}">
-              blog
+              Blog
               {% if page.url contains '/blog/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
@@ -101,3 +103,37 @@
     </progress>
   {% endif %}
 </header>
+
+{% if page.permalink == '/' %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var navItems = Array.from(document.querySelectorAll("[data-section-nav]"));
+      var sections = [
+        { id: "home", element: document.querySelector(".post-header") },
+        { id: "publications", element: document.getElementById("publications") },
+        { id: "news", element: document.getElementById("news") },
+      ].filter(function (section) {
+        return section.element;
+      });
+
+      function activate(sectionId) {
+        navItems.forEach(function (item) {
+          item.classList.toggle("active", item.getAttribute("data-section-nav") === sectionId);
+        });
+      }
+
+      function updateActiveSection() {
+        var current = "home";
+        sections.forEach(function (section) {
+          if (section.element.getBoundingClientRect().top <= 120) {
+            current = section.id;
+          }
+        });
+        activate(current);
+      }
+
+      window.addEventListener("scroll", updateActiveSection, { passive: true });
+      updateActiveSection();
+    });
+  </script>
+{% endif %}

@@ -1,5 +1,9 @@
 {% assign socials = site.data.socials %}
 <div class="social social-text">
+  {% if socials.email %}
+    <a href="mailto:{{ socials.email | encode_email }}">Email</a>
+  {% endif %}
+
   {% if socials.linkedin_username %}
     {% assign linkedin_url = socials.linkedin_username %}
     {% unless linkedin_url contains '://' %}
@@ -8,19 +12,21 @@
     <a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   {% endif %}
 
-  {% if socials.email %}
-    <a href="mailto:{{ socials.email | encode_email }}">Email</a>
-  {% endif %}
-
   {% if socials.cv_pdf %}
     <a href="{{ socials.cv_pdf | relative_url }}">CV</a>
   {% endif %}
 
-  {% if socials.scholar_userid %}
+  {% if socials.scholar_url %}
+    <a href="{{ socials.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+  {% elsif socials.scholar_userid %}
     <a href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
   {% endif %}
 
-  {% if socials.rss_icon %}
-    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  {% if socials.github_username %}
+    {% assign github_url = socials.github_username %}
+    {% unless github_url contains '://' %}
+      {% assign github_url = socials.github_username | prepend: 'https://github.com/' %}
+    {% endunless %}
+    <a href="{{ github_url }}" target="_blank" rel="noopener noreferrer">GitHub</a>
   {% endif %}
 </div>

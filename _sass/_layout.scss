@@ -5,7 +5,7 @@
 @use "variables" as v;
 
 body {
-  padding-bottom: 70px;
+  padding-bottom: 0;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
   font-family: "LXGW WenKai Mono TC", ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -22,7 +22,7 @@ body {
 
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
-  padding-top: 57px;
+  padding-top: 84px;
 }
 
 body.sticky-bottom-footer {

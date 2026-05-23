@@ -9,6 +9,8 @@
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
 }
 
 .navbar .dropdown-menu,
@@ -61,7 +63,8 @@
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
-    text-transform: uppercase;
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
 
     &:hover {
       color: var(--global-hover-color);

@@ -186,3 +186,37 @@
 .citation-number {
   color: var(--global-theme-color);
 }
+
+/* Publication list styling */
+.publication-row {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.publication-content {
+  flex: 1;
+}
+
+.preview {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.abbr {
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.author a {
+  border-bottom: 1px dashed var(--global-theme-color);
+}
+
+.links a.btn {
+  margin-right: 0.3rem;
+  margin-top: 0.3rem;
+}

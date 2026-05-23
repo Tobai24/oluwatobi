@@ -10,8 +10,7 @@ contact_note: >
   Connect with me on LinkedIn.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal website for Oluwatobi Iyanuoluwa Akinmuleya.
-footer_text: >
-  &copy; Copyright Oluwatobi Iyanuoluwa Akinmuleya.
+footer_text: ""
 keywords: oluwatobi, akinmuleya, portfolio, publications, blog # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ✦ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -52,7 +51,7 @@ external_services:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: false
 socials_in_search: true
 posts_in_search: true
