@@ -1,3 +1,15 @@
 _site/
 .git/
-assets/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+node_modules/
+vendor/
+lighthouse_results/
+readme_preview/
+assets/rendercv/rendercv_output/
+assets/audio/
+assets/video/
+assets/jupyter/
+assets/plotly/
+assets/html/
