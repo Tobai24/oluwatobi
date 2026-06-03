@@ -59,6 +59,12 @@ layout: default
     </p>
   </header>
 
+  {% if page.image %}
+    <div class="post-image">
+      {% include figure.liquid path=page.image alt=page.title loading="eager" cache_bust=true %}
+    </div>
+  {% endif %}
+
   <article class="post-content">
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">

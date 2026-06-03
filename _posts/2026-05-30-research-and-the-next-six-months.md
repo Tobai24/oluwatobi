@@ -1,42 +1,41 @@
 ---
 layout: post
-title: "Research and the Next Six Months"
+title: "Do Research and You Would Be Fine: My Goal For The Next Six Months"
 date: 2026-05-30
-description: A personal note on my research goals, my gap year, and the path I want to build over the next six months.
+description: "A personal note on my research goals and the path I want to build over the next six months."
 categories: research
 related_posts: false
+image: /assets/img/fly.png
 ---
 
-If you have spoken to me recently, you have probably heard me say this: if I do research, I will be fine.
+If you have spoken to me recently, you would have heard me say this: "If I do research, I would be fine." Most people might not fully understand what I mean by that, and honestly, I do not fully know where it will lead me either.
 
-Most people may not fully understand what I mean when I say that, and to be honest, I am still figuring out exactly where it will lead me. But over the past year, I kept asking academics the same question during interviews: what is one thing you think has taken you far in your career?
+During many academic interviews last year, I kept asking a simple question: "What's one thing you think has taken you far in your career?" The answer I kept hearing, in different forms, was consistent: **"write more papers."** That single pattern stayed with me and slowly shaped how I think about research.
 
-The answer I heard in different forms again and again was simple: write more papers.
+> **"Write more papers."**
 
-That answer stayed with me, and it made me believe that research is not just something I am interested in. It is something I need to commit to seriously.
+That became the underlying signal I could not ignore - not as a rule, but as a direction.
 
-I am currently in a gap year, and it is one of those seasons that keeps me awake at night. At this point, it feels inevitable, but I do not want to waste the opportunity. I want to make good use of this moment and build something meaningful from it.
+I am currently in a gap year, and it keeps me awake at night. At this point, it feels inevitable, but I have decided to make use of this period instead of worrying about it. I am writing this post to document my journey as an independent researcher and track my progress over the next six months. My goal is simple: **submit six papers for publication within the next six months**. Apart from that, I am also looking for a research internship or a lab that I can join.
 
-So I am writing this post to document my journey as an independent researcher and to track the progress I make over the next six months.
+My research interests lie in building data-efficient deep learning models using methods such as self-supervised learning and multimodal learning. Within medicine, I am particularly interested in nuclear medicine and, more specifically, pediatric imaging.
 
-My goal is clear: I want to submit six papers for publication in the next six months.
+Because of my medical background and because I talk so much about research these days, people often ask me: "Do you want to practice medicine, or do you just want to do research?" My answer has not changed. I want to do both. I want to be a physician-scientist.
 
-Alongside that, I am also looking for a research internship or a lab I can join. My research interests are in data-efficient deep learning, especially self-supervised learning and multimodal learning, with a strong interest in nuclear medicine and pediatric imaging.
+> **"I want to do both - I want to be a physician-scientist."**
 
-Because I come from a medical background and only recently started speaking seriously about research, a lot of people ask me whether I want to practice medicine or do research. My answer is both. I want to become a physician-scientist.
+I have failed while working on research papers in the past, but those experiences taught me valuable lessons. I believe learning from those failures will help me avoid repeating the same mistakes. From my previous interviews, I also realized that it has been difficult to convince people that I have AI skills for a research position. I believe doing independent research will help address that. I say independent because I do not currently have a lab, and I cannot join one without first proving myself.
 
-I have failed while working on research papers before, and those experiences taught me a lot. I do not see those failures as wasted time. I see them as preparation. They showed me where I need to improve, and they gave me a better understanding of what it takes to do meaningful work.
+> **"I cannot join a lab without first proving myself."**
 
-In previous interviews, I felt it was difficult to convince people that I had the AI skills needed for a PhD. But I believe that doing independent research will help me prove myself. Independent, because I do not have a lab right now, and I cannot join one without showing what I can do first.
+One thing that gives me confidence is mentorship. Throughout my research journey, I have met amazing people I can reach out to for guidance. I have learned that people are generally willing to help if they see that you are genuinely putting in the work.
 
-Mentorship matters too. I have been fortunate to meet amazing people whose advice I can reach out for. One thing I know is that people are often willing to help if you are willing to put in the work.
+> **"People are willing to help if you are genuinely putting in the work."**
 
-For a bit of background, I did a coding challenge last year where I coded every day until I got a job. I kept that going for about five months. It was a great learning experience, and while it did not change my life overnight, it opened doors and gave me opportunities I will always appreciate.
+Last year, I started a challenge where I coded every day until I got a job. I kept it going for about five months. It was a great learning experience. Did it completely change my life? Not really. But it opened doors and led to opportunities that, although they did not all work out, still shaped my direction.
 
-I am not saying that publishing papers over the next six months will automatically change my life either. But I do believe it will move me in the right direction.
+> **"Consistency opens doors, even when outcomes are uncertain."**
 
-Right now, I am also putting together a list of conferences where I would like to submit my work. In six months, I want to come back to this post and honestly assess whether I achieved my goal.
+I am not saying that publishing papers in the next six months will change my life either, but I believe it will move me in the right direction.
 
-I think I have the skill.
-
-Now let us see if I can put it to good use.
+Right now, I am working on a list of conferences to submit to. Six months from now, I will come back to this post and evaluate whether I achieved my goal. I think I have the skills. Now let's see if I can put them to good use.
