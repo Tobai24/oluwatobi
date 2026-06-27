@@ -1,0 +1,22 @@
+# Publications displayed on the homepage
+# (rendered by _includes/publications_list.liquid). Listed newest first.
+- title: >
+    NeuroAIHub: An AI-Driven Framework for Automated Curation and Discovery of
+    Neuroradiology Datasets
+  authors: >
+    B. Gheiji, S. Moradi, M. Vatanparast, S. Shokrani, M.A. Bagherzadeh,
+    D. Elyassirad, O.I. Akinmuleya, S. Goodarzi, M. Heidari-Foroozan, M. Moassefi,
+    J.D. Rudie, E. Calabrese, R. Jain, S. Faghani
+  venue: American Journal of Neuroradiology
+  year: 2026
+  url: https://www.ajnr.org/content/early/2026/04/24/ajnr.A9363
+  tags: [American Journal of Neuroradiology, 2026]
+
+- title: >
+    68Ga-PSMA PET/CT/MRI in the Initial Diagnosis and Staging of Prostate Cancer:
+    A Review
+  authors: O.I. Akinmuleya, P.F. Cohen, K. Kairemo
+  venue: Advances in Radiotherapy & Nuclear Medicine
+  year: 2024
+  url: https://doi.org/10.36922/arnm.4590
+  tags: [Advances in Radiotherapy & Nuclear Medicine, 2024]

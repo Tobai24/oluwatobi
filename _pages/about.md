@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle:
+subtitle: Medical doctor & AI researcher.
 
 profile:
   align: left

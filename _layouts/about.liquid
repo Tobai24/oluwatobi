@@ -47,17 +47,33 @@ layout: default
       <div class="about-hero-content">{{ content }}</div>
     </div>
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2 id="publications">
+    <!-- Publications -->
+    {% if site.data.publications %}
+      <h2 id="publications" class="section-heading">
         <a href="{{ '/#publications' | relative_url }}" style="color: inherit">Publications</a>
       </h2>
-      {% include selected_papers.liquid %}
+      {% include publications_list.liquid %}
+    {% endif %}
+
+    <!-- Presentations -->
+    {% if site.data.presentations %}
+      <h2 id="presentations" class="section-heading">
+        <a href="{{ '/#presentations' | relative_url }}" style="color: inherit">Presentations</a>
+      </h2>
+      {% include presentations_list.liquid %}
+    {% endif %}
+
+    <!-- Projects -->
+    {% if site.data.projects %}
+      <h2 id="projects" class="section-heading">
+        <a href="{{ '/#projects' | relative_url }}" style="color: inherit">Projects</a>
+      </h2>
+      {% include projects_list.liquid %}
     {% endif %}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2 id="news">
+      <h2 id="news" class="section-heading">
         <a href="{{ '/#news' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -65,11 +81,22 @@ layout: default
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
+      <h2 class="section-heading">
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
+
+    <!-- Contact -->
+    <h2 id="contact" class="section-heading">
+      <a href="{{ '/#contact' | relative_url }}" style="color: inherit">Contact</a>
+    </h2>
+    <div class="contact-section">
+      <p class="contact-note">
+        My inbox is always open. Whether it's research, a collaboration, a question about AI in medicine, or just a
+        hello, I'd love to hear from you. I read and reply to every message, so don't be a stranger. 🌱
+      </p>
+    </div>
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

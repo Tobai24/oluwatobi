@@ -1,0 +1,18 @@
+<div class="project-list">
+  {% for presentation in site.data.presentations %}
+    <div class="project-item">
+      <h3 class="project-title">{{ presentation.title }}</h3>
+      <p class="project-desc">
+        {{ presentation.venue }}{% if presentation.note %} &middot; {{ presentation.note }}{% endif %}
+      </p>
+      <ul class="project-tags">
+        {% if presentation.type %}
+          <li>{{ presentation.type }}</li>
+        {% endif %}
+        {% if presentation.year %}
+          <li>{{ presentation.year }}</li>
+        {% endif %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

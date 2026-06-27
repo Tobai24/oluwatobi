@@ -1,0 +1,30 @@
+# Conference presentations displayed on the homepage
+# (rendered by _includes/presentations_list.liquid). Listed newest first.
+- title: >
+    Quantifying Amyloid Burden in Alzheimer's Disease: A Reproducible Centiloid
+    Pipeline for Analysis in Resource-Constrained Settings
+  type: Poster Presentation
+  venue: Alzheimer's Association International Conference (AAIC)
+  year: 2026
+  note: "Abstract ID: #4997"
+
+- title: >
+    Training 105 African Clinicians and Students in Open Neuroimaging Analysis:
+    CAMERA's Dimensional Research Program
+  type: Poster Presentation
+  venue: International Society for Magnetic Resonance in Medicine (ISMRM) Annual Meeting
+  year: 2026
+
+- title: >
+    NeuroAI: An AI-Driven Framework for Automated Curation and Discovery of
+    Neuroradiology Datasets
+  type: Oral / Poster Presentation
+  venue: American Society of Neuroradiology (ASNR) Annual Meeting, Philadelphia, USA
+  year: 2025
+
+- title: >
+    The Role of 68Ga-PSMA PET/CT and PET/MRI in the Diagnosis of Primary Prostate
+    Cancer and TNM Staging
+  type: Poster Presentation
+  venue: International Conference of Hybrid Imaging, International Atomic Energy Agency (IAEA), Vienna
+  year: 2024

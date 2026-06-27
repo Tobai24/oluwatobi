@@ -58,32 +58,60 @@ ul.task-list input[type="checkbox"] {
 .about-hero {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .about-hero-content {
   flex: 1 1 0;
   min-width: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  // Tight top/bottom so the text block starts and ends flush with the image.
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .profile {
-  flex: 0 0 280px;
-  width: 280px;
-  max-width: 280px;
+  flex: 0 0 300px;
+  width: 300px;
+  max-width: 300px;
+
+  figure {
+    margin: 0;
+  }
 
   img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
   }
 
   .profile-placeholder {
     aspect-ratio: 4 / 5;
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
+    border-radius: 18px;
     width: 100%;
   }
 
@@ -99,15 +127,47 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Desktop: make the photo exactly as tall as the bio text, so the image and
+// text start AND finish on the same lines. Uses a gentle top-anchored crop
+// (head stays fully visible).
+@media (min-width: 768px) {
+  .about-hero {
+    align-items: stretch;
+  }
+
+  .profile {
+    position: relative;
+  }
+
+  .profile figure {
+    position: absolute;
+    inset: 0;
+  }
+
+  .profile picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
 @media (max-width: 767px) {
   .about-hero {
     flex-direction: column;
-    gap: 1.25rem;
+    align-items: center;
+    text-align: left;
+    gap: 1.5rem;
   }
 
   .profile {
     width: 100%;
-    max-width: 100%;
+    max-width: 260px;
     flex-basis: auto;
   }
 }
@@ -260,6 +320,167 @@ ul.task-list input[type="checkbox"] {
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0;
+}
+
+/* Homepage section headings (Publications, Presentations, Projects, Contact) */
+.section-heading {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Minimalist project list (homepage Projects section) */
+.project-list {
+  margin-bottom: 1rem;
+
+  .project-item {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+
+    .project-gh {
+      color: var(--global-text-color-light);
+      font-size: 0.95rem;
+      margin-left: 0.5rem;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .project-desc {
+    color: var(--global-text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.55rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      background-color: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.6rem;
+      color: var(--global-text-color-light);
+      font-size: 0.72rem;
+      padding: 0.12rem 0.55rem;
+    }
+  }
+}
+
+/* Contact section (homepage) */
+.contact-section {
+  margin-bottom: 2rem;
+
+  .contact-note {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 0.65rem;
+  }
+
+  .social-text a {
+    color: var(--global-theme-color);
+    font-size: 0.95rem;
+    margin-right: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Minimalist theme toggle icon */
+.theme-icon {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.35s ease;
+}
+
+#light-toggle:hover .theme-icon {
+  transform: rotate(20deg);
+}
+
+/* Subtle entrance + interaction animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .post-header,
+  .post article > *,
+  .post > .project-list {
+    animation: fade-up 0.6s ease both;
+  }
+
+  /* Stagger the homepage sections as they appear */
+  .post article > *:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  .post article > *:nth-child(2) {
+    animation-delay: 0.12s;
+  }
+  .post article > *:nth-child(3) {
+    animation-delay: 0.19s;
+  }
+  .post article > *:nth-child(4) {
+    animation-delay: 0.26s;
+  }
+  .post article > *:nth-child(5) {
+    animation-delay: 0.33s;
+  }
+  .post article > *:nth-child(6) {
+    animation-delay: 0.4s;
+  }
+  .post article > *:nth-child(n + 7) {
+    animation-delay: 0.45s;
+  }
+}
+
+/* Gentle lift on the list rows */
+.project-list .project-item {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-list .project-item:hover {
+  transform: translateX(4px);
 }
 
 .post article .clearfix {

@@ -182,6 +182,30 @@
   }
 }
 
+// Keep the navbar links always visible (never collapse to a hamburger),
+// and let them wrap gracefully on narrow screens instead of overflowing.
+@media (max-width: 575px) {
+  #navbar .navbar-collapse {
+    display: flex !important;
+    flex-basis: 100%;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  .navbar.navbar-light .navbar-nav {
+    flex-wrap: wrap !important;
+    justify-content: flex-end;
+    row-gap: 0.15rem;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+}
+
 #search-toggle {
   padding: 0;
   border: 0;

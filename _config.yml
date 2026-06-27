@@ -6,8 +6,8 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Oluwatobi
 middle_name: Iyanuoluwa
 last_name: Akinmuleya
-contact_note: >
-  Connect with me on LinkedIn.
+# The homepage contact message lives in _layouts/about.liquid (Contact section),
+# so it hot-reloads on rebuild instead of requiring a full server restart.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal website for Oluwatobi Iyanuoluwa Akinmuleya.
 footer_text: ""

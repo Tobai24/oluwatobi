@@ -1,0 +1,32 @@
+<div class="project-list">
+  {% for project in site.data.projects %}
+    <div class="project-item">
+      <h3 class="project-title">
+        {% if project.github and project.github != '#' %}
+          <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+        {% else %}
+          {{ project.title }}
+        {% endif %}
+        {% if project.github %}
+          <a
+            class="project-gh"
+            href="{{ project.github }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="{{ project.title }} code repository"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        {% endif %}
+      </h3>
+      <p class="project-desc">{{ project.description }}</p>
+      {% if project.tags %}
+        <ul class="project-tags">
+          {% for tag in project.tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

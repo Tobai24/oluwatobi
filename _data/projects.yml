@@ -1,0 +1,42 @@
+# Projects displayed on the homepage (rendered by _includes/projects_list.liquid).
+# Listed in the order they appear here. Replace each `github: "#"` placeholder
+# with the real repository URL when available.
+- title: In-hospital Mortality Prediction
+  description: >
+    End-to-end ML pipeline predicting in-hospital mortality, with a Streamlit app
+    deployed on Google Cloud, CI/CD via GitHub Actions, and live model monitoring
+    using Evidently AI and Grafana.
+  tags: [MLflow, Mage, Docker, GCP, Evidently AI, Grafana, Streamlit]
+  github: https://github.com/Tobai24/In-Hospital-Mortality-Prediction
+
+- title: Computer Vision Projects
+  description: >
+    A collection of computer vision work: a real-time face recognition system
+    (MTCNN + InceptionResnetV1) and a medical imaging model for polyp detection in
+    gastrointestinal images, fine-tuned on YOLOv11 to assist early diagnosis.
+  tags: [PyTorch, OpenCV, YOLOv11, MTCNN, InceptionResnetV1]
+  github: https://github.com/Tobai24/Computer_vision
+
+- title: Logos
+  description: >
+    An end-to-end RAG application for scripture-based Q&A, with an evaluation
+    pipeline comparing keyword, vector, and hybrid search using hit rate and MRR
+    for retrieval optimization.
+  tags: [RAG, Elasticsearch, MiniSearch, OpenAI API]
+  github: https://github.com/Tobai24/logos
+
+- title: Data Analyst AI Agent
+  description: >
+    An AI-powered data analyst agent that performs automated data exploration,
+    visualization, and analysis from natural-language queries, built with LangGraph
+    to interpret requests and generate insights.
+  tags: [LangGraph, OpenAI API, Agents]
+  github: https://github.com/Tobai24/Data_analyst_agent
+
+- title: LLM Finetuning
+  description: >
+    Fine-tuned Meta's LLaMA 3 on a medical QA dataset for stronger clinical and
+    diagnostic accuracy, using Unsloth to accelerate training and LoRA / PEFT to
+    cut compute and memory cost.
+  tags: [LLaMA 3, Unsloth, LoRA, PEFT]
+  github: https://github.com/Tobai24/FineTuning
