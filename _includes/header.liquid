@@ -71,9 +71,6 @@
               {% endif %}
             </a>
           </li>
-          <li class="nav-item" data-section-nav="contact">
-            <a class="nav-link" href="{{ '/#contact' | relative_url }}" data-section-link="contact">Contact</a>
-          </li>
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
@@ -164,7 +161,6 @@
         { id: "publications", element: document.getElementById("publications") },
         { id: "presentations", element: document.getElementById("presentations") },
         { id: "projects", element: document.getElementById("projects") },
-        { id: "contact", element: document.getElementById("contact") },
       ].filter(function (section) {
         return section.element;
       });

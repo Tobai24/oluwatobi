@@ -185,6 +185,36 @@
 // Keep the navbar links always visible (never collapse to a hamburger),
 // and let them wrap gracefully on narrow screens instead of overflowing.
 @media (max-width: 575px) {
+  // On small screens, let the navbar sit in normal flow instead of being
+  // fixed/overlapping. A wrapped multi-row nav is taller than the fixed
+  // 84px offset, so fixing it would hide the page content underneath.
+  #navbar.fixed-top {
+    position: static;
+  }
+
+  body.fixed-top-nav {
+    padding-top: 0;
+  }
+
+  .navbar {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  // Stack the brand above the links, both centered.
+  #navbar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar.navbar-light .navbar-brand {
+    margin-right: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    text-align: center;
+    white-space: normal;
+  }
+
   #navbar .navbar-collapse {
     display: flex !important;
     flex-basis: 100%;
@@ -196,13 +226,17 @@
 
   .navbar.navbar-light .navbar-nav {
     flex-wrap: wrap !important;
-    justify-content: flex-end;
-    row-gap: 0.15rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 0.1rem;
+    row-gap: 0.1rem;
   }
 
   .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 
