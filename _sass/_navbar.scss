@@ -228,6 +228,13 @@
     flex-basis: 100%;
     min-width: 0;
     max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  #navbar .navbar-collapse::-webkit-scrollbar {
+    display: none;
   }
 
   .navbar-toggler {
@@ -235,19 +242,15 @@
   }
 
   .navbar.navbar-light .navbar-nav {
+    flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    width: max-content !important;
+    min-width: max-content;
+    overflow: visible;
     white-space: nowrap;
-    scrollbar-width: none;
     column-gap: 0.1rem;
-  }
-
-  .navbar.navbar-light .navbar-nav::-webkit-scrollbar {
-    display: none;
   }
 
   .navbar.navbar-light .navbar-nav .nav-item {
@@ -255,6 +258,7 @@
   }
 
   .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    white-space: nowrap;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-size: 0.9rem;
