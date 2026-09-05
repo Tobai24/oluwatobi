@@ -1,0 +1,12 @@
+<div class="entry-list experience-list">
+  {% for item in entries %}
+    <article class="timeline-entry">
+      <p class="entry-year">{{ item.date }}</p>
+      <div class="entry-body">
+        <h3 class="entry-title">{{ item.role }}</h3>
+        <p class="entry-venue">{{ item.organization }}</p>
+        <p class="entry-description">{{ item.description }}</p>
+      </div>
+    </article>
+  {% endfor %}
+</div>

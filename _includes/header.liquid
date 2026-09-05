@@ -8,7 +8,7 @@
       {% endif %}
       {% if show_brand %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+          OA<span>.</span>
         </a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
@@ -34,8 +34,8 @@
         <ul class="navbar-nav ml-auto flex-nowrap">
           <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}" data-section-nav="home">
-            <a class="nav-link" href="{{ '/' | relative_url }}" data-section-link="home">
-              About
+            <a class="nav-link" href="{{ '/#about' | relative_url }}" data-section-link="home">
+              about
               {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
@@ -43,21 +43,22 @@
           </li>
 
           <li class="nav-item" data-section-nav="publications">
-            <a class="nav-link" href="{{ '/#publications' | relative_url }}" data-section-link="publications">Publications</a>
-          </li>
-          <li class="nav-item" data-section-nav="presentations">
-            <a class="nav-link" href="{{ '/#presentations' | relative_url }}" data-section-link="presentations">Presentations</a>
+            <a class="nav-link" href="{{ '/#publications' | relative_url }}" data-section-link="publications">publications</a>
           </li>
           <li class="nav-item" data-section-nav="projects">
-            <a class="nav-link" href="{{ '/#projects' | relative_url }}" data-section-link="projects">Projects</a>
+            <a class="nav-link" href="{{ '/#projects' | relative_url }}" data-section-link="projects">projects</a>
           </li>
-          <li class="nav-item {% if page.url contains '/blog/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/blog/' | relative_url }}">
-              Writing
-              {% if page.url contains '/blog/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
+          <li class="nav-item" data-section-nav="news">
+            <a class="nav-link" href="{{ '/#news' | relative_url }}" data-section-link="news">news</a>
+          </li>
+          <li class="nav-item" data-section-nav="contact">
+            <a class="nav-link" href="{{ '/#contact' | relative_url }}" data-section-link="contact">contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/blog/' | relative_url }}">blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">cv</a>
           </li>
           {% if site.search_enabled %}
             <!-- Search -->
@@ -147,8 +148,9 @@
       var sections = [
         { id: "home", element: document.querySelector(".post-header") },
         { id: "publications", element: document.getElementById("publications") },
-        { id: "presentations", element: document.getElementById("presentations") },
         { id: "projects", element: document.getElementById("projects") },
+        { id: "news", element: document.getElementById("news") },
+        { id: "contact", element: document.getElementById("contact") },
       ].filter(function (section) {
         return section.element;
       });

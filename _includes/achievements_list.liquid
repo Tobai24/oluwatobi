@@ -1,0 +1,12 @@
+<div class="entry-list achievements-list">
+  {% for achievement in site.data.achievements %}
+    <article class="timeline-entry">
+      <p class="entry-year">{{ achievement.date }}</p>
+      <div class="entry-body">
+        <h3 class="entry-title">{{ achievement.title }}</h3>
+        {% if achievement.organization %}<p class="entry-venue">{{ achievement.organization }}</p>{% endif %}
+        {% if achievement.description %}<p class="entry-description">{{ achievement.description }}</p>{% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

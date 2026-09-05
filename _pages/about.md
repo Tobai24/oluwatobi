@@ -2,21 +2,13 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Medical doctor & AI researcher
-
-profile:
-  align: left
-  image: blog_image.jpeg
-  image_circular: false # crops the image to make it circular
-  more_info:
-
 selected_papers: true # displays publications on the homepage
-social: true # includes social icons at the bottom of the page
+social: false # contact links are shown in the contact section
 
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 20 # show all current news entries
 
 latest_posts:
   enabled: false
@@ -24,6 +16,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a medical doctor passionate about advancing data-efficient artificial intelligence for medical imaging, particularly in resource-constrained environments. My work focuses on developing robust learning frameworks that can effectively leverage limited labeled data while improving imaging accessibility and quality across diverse clinical applications, including pediatric imaging.
+I am a medical doctor and independent researcher at [ML Collective](https://mlcollective.org/), working at the intersection of [medical imaging](#projects), artificial intelligence, and computational medicine. My work focuses on building data-efficient and clinically useful learning systems for imaging, especially in resource-constrained environments.
 
-My research interests include self-supervised learning, multimodal representation learning and nuclear medicine imaging. In the long term, I aim to develop accessible and reliable AI-driven imaging solutions that enhance healthcare delivery and improve patient outcomes globally.
+My research interests include medical imaging AI, MRI and low-field MRI, neuroradiology, nuclear medicine, representation learning, foundation models, self-supervised learning, and imaging in underserved populations. In the long term, I hope to contribute to equitable AI systems for medical imaging and precision medicine. See my [publications](#publications) or [projects](#projects) to explore this work.

@@ -1,0 +1,16 @@
+<div class="entry-list research-list">
+  {% for item in site.data.research %}
+    <article class="timeline-entry">
+      <p class="entry-year">{{ item.year }}</p>
+      <div class="entry-body">
+        <h3 class="entry-title">{{ item.title }}</h3>
+        <p class="entry-description">{{ item.description }}</p>
+        {% if item.tags %}
+          <ul class="entry-tags" aria-label="Research topics">
+            {% for tag in item.tags %}<li>{{ tag }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,32 +1,15 @@
-<div class="project-list">
+<div class="project-list publication-list">
   {% for publication in site.data.publications %}
     <div class="project-item">
       <h3 class="project-title">
-        {% if publication.url %}
-          <a href="{{ publication.url }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
-        {% else %}
-          {{ publication.title }}
-        {% endif %}
-        {% if publication.url %}
-          <a
-            class="project-gh"
-            href="{{ publication.url }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="{{ publication.title }} link"
-          >
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </a>
-        {% endif %}
+        {% if publication.url %}<a href="{{ publication.url }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}
       </h3>
       <p class="project-desc">{{ publication.authors }}</p>
-      {% if publication.tags %}
-        <ul class="project-tags">
-          {% for tag in publication.tags %}
-            <li>{{ tag }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+      <ul class="project-tags">
+        {% if publication.venue %}<li>{% if publication.venue_url %}<a class="conference-link" href="{{ publication.venue_url }}" target="_blank" rel="noopener noreferrer">{{ publication.venue }}</a>{% else %}{{ publication.venue }}{% endif %}</li>{% endif %}
+        {% if publication.status %}<li>{{ publication.status }}</li>{% endif %}
+        {% if publication.year %}<li>{{ publication.year }}</li>{% endif %}
+      </ul>
     </div>
   {% endfor %}
 </div>

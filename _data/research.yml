@@ -1,0 +1,24 @@
+- year: 2026
+  title: "MYRA: Multi-domain Hybrid MRI Representation Architecture"
+  description: "A multi-domain representation learning project for self-supervised learning in low-field MRI."
+  tags: [low-field MRI, self-supervised learning, representation learning]
+
+- year: 2026
+  title: "NeuroAIHub"
+  description: "An AI-driven framework for automated curation and discovery of neuroradiology datasets."
+  tags: [neuroradiology, datasets, medical imaging AI]
+
+- year: 2026
+  title: "African Clinical MRI Generalization"
+  description: "Evaluating how neuroimaging foundation models generalize to African clinical MRI data."
+  tags: [foundation models, clinical MRI, Africa]
+
+- year: 2026
+  title: "Pediatric Ultra-Low-Field MRI"
+  description: "Improving neuroanatomy segmentation and quality assurance for pediatric ultra-low-field MRI."
+  tags: [pediatric imaging, MRI, segmentation]
+
+- year: 2025
+  title: "Medical Imaging AI and MRI Reconstruction"
+  description: "Exploring data-efficient learning, image reconstruction, and robust computer vision methods for clinical imaging."
+  tags: [MRI reconstruction, computer vision, deep learning]

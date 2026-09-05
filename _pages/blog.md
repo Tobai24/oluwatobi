@@ -33,7 +33,9 @@ pagination:
   <div class="project-list">
     {% for post in postlist %}
       {% assign preview_text = post.description | default: post.excerpt | strip_html | truncate: 160 %}
-      <div class="project-item">
+      <div class="project-item blog-item">
+        {% if post.image %}<img class="blog-thumbnail" src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}
+        <div>
         <h3 class="project-title">
           {% if post.redirect == blank %}
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -52,6 +54,7 @@ pagination:
             <li>{{ post.external_source }}</li>
           {% endif %}
         </ul>
+        </div>
       </div>
     {% endfor %}
   </div>

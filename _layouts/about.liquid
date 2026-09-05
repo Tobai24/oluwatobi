@@ -1,100 +1,69 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post portfolio-home">
   <header class="post-header">
     <h1 class="post-title">
       {{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
     </h1>
-    {% if page.subtitle %}
-      <p class="desc">{{ page.subtitle }}</p>
-    {% endif %}
-    {% if page.social %}
-      {% include social_text.liquid %}
-    {% endif %}
   </header>
 
   <article>
-    <div class="about-hero">
-      {% if page.profile %}
-        <div class="profile">
-          {% if page.profile.image %}
-            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-            {% if page.profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-            {% else %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-            {% endif %}
-            {% capture sizes %}(min-width: {{ site.max_width }}) 280px, (min-width: 576px) 30vw, 95vw{% endcapture %}
-            {%
-              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-              cache_bust=true
-            %}
-          {% else %}
-            <div class="profile-placeholder" aria-label="Profile image placeholder"></div>
-          {% endif %}
-          {% if page.profile.more_info %}
-            <div class="more-info">{{ page.profile.more_info }}</div>
-          {% endif %}
-        </div>
-      {% endif %}
+    <section class="home-section" id="about">
+      <h2 class="section-heading"><a href="#about">about</a></h2>
+      <div class="section-content about-hero-content">{{ content }}</div>
+    </section>
 
-      <div class="about-hero-content">{{ content }}</div>
-    </div>
-
-    <!-- Publications -->
     {% if site.data.publications %}
-      <h2 id="publications" class="section-heading">
-        <a href="{{ '/#publications' | relative_url }}" style="color: inherit">Publications</a>
-      </h2>
-      {% include publications_list.liquid %}
+      <section class="home-section" id="publications">
+        <h2 class="section-heading"><a href="#publications">publications</a></h2>
+        <div class="section-content">{% include publications_list.liquid %}</div>
+      </section>
     {% endif %}
 
-    <!-- Presentations -->
     {% if site.data.presentations %}
-      <h2 id="presentations" class="section-heading">
-        <a href="{{ '/#presentations' | relative_url }}" style="color: inherit">Presentations</a>
-      </h2>
-      {% include presentations_list.liquid %}
+      <section class="home-section" id="presentations">
+        <h2 class="section-heading"><a href="#presentations">presentations</a></h2>
+        <div class="section-content">{% include presentations_list.liquid %}</div>
+      </section>
     {% endif %}
 
-    <!-- Projects -->
     {% if site.data.projects %}
-      <h2 id="projects" class="section-heading">
-        <a href="{{ '/#projects' | relative_url }}" style="color: inherit">Projects</a>
-      </h2>
-      {% include projects_list.liquid %}
+      <section class="home-section" id="projects">
+        <h2 class="section-heading"><a href="#projects">projects</a></h2>
+        <div class="section-content">{% include projects_list.liquid %}</div>
+      </section>
     {% endif %}
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2 id="news" class="section-heading">
-        <a href="{{ '/#news' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
+    {% if site.news %}
+      <section class="home-section" id="news">
+        <h2 class="section-heading"><a href="#news">news</a></h2>
+        <div class="section-content">
+          {% include news.liquid limit=true %}
+        </div>
+      </section>
     {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2 class="section-heading">
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Contact -->
-    <h2 id="contact" class="section-heading">
-      <a href="{{ '/#contact' | relative_url }}" style="color: inherit">Contact</a>
-    </h2>
-    <div class="contact-section">
-      <p class="contact-note">
-        My inbox is always open. Whether it's research, a collaboration, a question about AI in medicine, or just a
-        hello, I'd love to hear from you. I read and reply to every message, so don't be a stranger. 🌱
-      </p>
-    </div>
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
+    <section class="home-section" id="contact">
+      <h2 class="section-heading"><a href="#contact">contact</a></h2>
+      <div class="section-content contact-section">
+        <p class="contact-note">Happy to talk about medical imaging, AI, research collaborations, or opportunities in radiology and nuclear medicine. Feel free to reach out if you want to chat about anything at the intersection of technology, medicine, and people, or just say hi!</p>
+        {% assign socials = site.data.socials %}
+        <div class="contact-links">
+          {% if socials.email %}<div><span class="contact-label">email</span><span>{{ socials.email }}</span></div>{% endif %}
+          {% if socials.github_username %}
+            {% assign github_url = socials.github_username %}
+            {% unless github_url contains '://' %}{% assign github_url = socials.github_username | prepend: 'https://github.com/' %}{% endunless %}
+            <div><span class="contact-label">github</span><span>{{ github_url | remove: 'https://' }}</span></div>
+          {% endif %}
+          {% if socials.linkedin_username %}
+            {% assign linkedin_url = socials.linkedin_username %}
+            {% unless linkedin_url contains '://' %}{% assign linkedin_url = socials.linkedin_username | prepend: 'https://www.linkedin.com/in/' %}{% endunless %}
+            <div><span class="contact-label">linkedin</span><span>{{ linkedin_url | remove: 'https://' }}</span></div>
+          {% endif %}
+          {% if socials.scholar_url %}<div><span class="contact-label">google scholar</span><span><a href="{{ socials.scholar_url }}" target="_blank" rel="noopener noreferrer">author profile</a></span></div>{% endif %}
+        </div>
+      </div>
+    </section>
   </article>
 </div>

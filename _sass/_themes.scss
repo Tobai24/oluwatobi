@@ -8,17 +8,17 @@
   color-scheme: light;
   --global-bg-color: #ffffff;
   --global-code-bg-color: #f1f3f5;
-  --global-text-color: #24231f;
-  --global-text-color-light: #68645a;
-  --global-theme-color: #56685c;
-  --global-hover-color: #394a40;
+  --global-text-color: #18221d;
+  --global-text-color-light: #667169;
+  --global-theme-color: #18221d;
+  --global-hover-color: #000000;
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #ffffff;
   --global-footer-text-color: #000000;
   --global-footer-link-color: #000000;
   --global-distill-app-color: #68645a;
   --global-divider-color: rgba(31, 35, 40, 0.12);
-  --global-card-bg-color: #f7f8fa;
+  --global-card-bg-color: #ebe7dd;
   --global-highlight-color: #7b4f3f;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},

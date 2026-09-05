@@ -6,11 +6,11 @@
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 0;
   background-color: var(--global-bg-color);
   opacity: 0.95;
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.1rem;
 }
 
 .navbar .dropdown-menu,
@@ -59,12 +59,21 @@
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700 !important;
+    letter-spacing: -0.06em;
+
+    span { color: var(--global-theme-color); }
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
-    padding-left: 0.95rem;
-    padding-right: 0.95rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
 
     &:hover {
       color: var(--global-hover-color);

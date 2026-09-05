@@ -9,8 +9,8 @@
         {% if presentation.type %}
           <li>{{ presentation.type }}</li>
         {% endif %}
-        {% if presentation.year %}
-          <li>{{ presentation.year }}</li>
+        {% if presentation.month or presentation.year %}
+          <li>{% if presentation.month %}{{ presentation.month }} {% endif %}{{ presentation.year }}</li>
         {% endif %}
       </ul>
     </div>
