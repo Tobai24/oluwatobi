@@ -17,11 +17,20 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Header -->
-    {% include header.liquid %}
+    {% if page.permalink == '/' %}
+      <div class="homepage-shell">
+        <div class="homepage-name">
+          <h1>{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }} (欧芦)</h1>
+        </div>
+        <div class="homepage-navigation">{% include header.liquid %}</div>
+        <div class="container mt-5" role="main">{{ content }}</div>
+      </div>
+    {% else %}
+      <!-- Header -->
+      {% include header.liquid %}
 
-    <!-- Content -->
-    <div class="container mt-5" role="main">
+      <!-- Content -->
+      <div class="container mt-5" role="main">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -45,7 +54,8 @@
       {% else %}
         {{ content }}
       {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
     <!-- Footer -->
     {% include footer.liquid %}

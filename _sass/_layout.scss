@@ -36,6 +36,46 @@ body.sticky-bottom-footer {
 
 html { scroll-behavior: smooth; }
 
+.homepage-shell {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-name {
+  order: 2;
+  width: 100%;
+  max-width: 1080px;
+  margin: 3rem auto 0;
+  padding: 0 15px;
+}
+
+.homepage-name h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.homepage-navigation { order: 1; }
+.homepage-shell > .container { order: 3; }
+
+@media (max-width: 575px) {
+  .homepage-name {
+    order: 1;
+    margin-top: 1.1rem;
+  }
+
+  .homepage-name h1 {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+
+  .homepage-navigation { order: 2; }
+  .homepage-shell > .container {
+    order: 3;
+    margin-top: 1.25rem !important;
+  }
+}
+
 // Profile
 .profile {
   img {
