@@ -51,7 +51,7 @@ html { scroll-behavior: smooth; }
 
 .homepage-name h1 {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.7rem !important;
   line-height: 1.2;
 }
 
@@ -61,11 +61,11 @@ html { scroll-behavior: smooth; }
 @media (max-width: 575px) {
   .homepage-name {
     order: 1;
-    margin-top: 0.8rem;
+    margin-top: 1rem !important;
   }
 
   .homepage-name h1 {
-    font-size: 0.78rem;
+    font-size: 1rem !important;
     line-height: 1.2;
   }
 
