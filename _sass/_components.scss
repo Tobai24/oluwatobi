@@ -550,6 +550,14 @@ ul.task-list input[type="checkbox"] {
   .contact-links > div { gap: .45rem; grid-template-columns: 7.5rem minmax(0, 1fr); }
   .blog-item { grid-template-columns: 82px minmax(0, 1fr); }
   .blog-thumbnail { height: 60px; width: 82px; }
+
+  .portfolio-home .about-hero-content,
+  .portfolio-home .contact-note { font-size: .9rem; line-height: 1.65; }
+  .portfolio-home .contact-links > div > span:last-child { font-size: .9rem; }
+  .portfolio-home .project-list .project-title { font-size: .9rem; }
+  .portfolio-home .project-list .project-desc { font-size: .9rem; line-height: 1.5; }
+  .portfolio-home .home-section#news .news table td,
+  .portfolio-home .home-section#news .news table th { font-size: .9rem; line-height: 1.5; }
 }
 
 /* Minimalist theme toggle icon */
