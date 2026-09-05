@@ -80,6 +80,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Set project site base URL
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "baseurl"
+          value: "/oluwatobi"
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

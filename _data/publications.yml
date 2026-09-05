@@ -32,3 +32,22 @@
   venue_url: https://mirasol.rise-miccai.org/
   status: Accepted
   year: 2026
+- title: >
+    NeuroAIHub: An AI-Driven Framework for Automated Curation and Discovery of
+    Neuroradiology Datasets
+  url: https://www.ajnr.org/content/early/2026/04/24/ajnr.A9363
+  authors: >
+    B. Gheiji, S. Moradi, M. Vatanparast, S. Shokrani, M.A. Bagherzadeh,
+    D. Elyassirad, O.I. Akinmuleya, S. Goodarzi, M. Heidari-Foroozan,
+    M. Moassefi, J.D. Rudie, E. Calabrese, R. Jain, S. Faghani
+  venue: American Journal of Neuroradiology
+  status: Accepted Manuscript
+  year: 2026
+- title: >
+    68Ga-PSMA PET/CT/MRI in the Initial Diagnosis and Staging of Prostate
+    Cancer: A Review
+  url: https://doi.org/10.36922/arnm.4590
+  authors: O.I. Akinmuleya, P.F. Cohen, K. Kairemo
+  venue: Advances in Radiotherapy & Nuclear Medicine, 2(4), 4590
+  status: Published
+  year: 2024
